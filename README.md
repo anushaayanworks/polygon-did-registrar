@@ -65,14 +65,14 @@ Method 1: With user's personal privateKey and network type(mainnet/testnet)
 
 ```js
 import { createDID } from "polygon-did-registrar";
-const txHash = await createDID(network, privateKey);
+const {address, publicKey58, privateKey, DID} = await createDID(network, privateKey);
 ```
 
 Method 2: With only network type(mainnet/testnet)
 
 ```js
 import { createDID } from "polygon-did-registrar";
-const txHash = await createDID(network);
+const {address, publicKey58, privateKey, DID} = await createDID(network);
 ```
 The function returns, address, publicKey (base58 format), privateKey and DID uri.
 
